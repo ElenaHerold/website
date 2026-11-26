@@ -57,7 +57,7 @@ img { max-width: 100%; }
 main { min-height: calc(100vh - 120px); }
 main:has(> .hero) { min-height: 0; }
 .container { width: min(calc(100% - 4rem), 1080px); margin: auto; }
-.hero { display: flex; align-items: center; padding: 5rem 0 2.75rem; }
+.hero { display: flex; align-items: center; padding: 5rem 0 4rem; }
 .profile-hero { display: grid; grid-template-columns: minmax(320px, .86fr) minmax(0, 1.14fr); gap: clamp(2.8rem, 5vw, 4.8rem); align-items: center; }
 .profile-hero h1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: .055em; }
 .portrait { display: block; width: 100%; height: auto; object-fit: contain; border: 0; box-shadow: none; margin: 0; }
@@ -221,7 +221,7 @@ html:not([data-theme="light"]) .paper-links a, html:not([data-theme="light"]) de
 
 @media (max-width: 620px) {
   .hero, .compact-page { padding: 3rem 0 4rem; }
-  .hero { padding-bottom: 2.125rem; }
+  .hero { padding-bottom: 3.25rem; }
   h1 { font-size: 3.35rem; }
   .paper-card { grid-template-columns: 1fr; }
   .paper-card h3, .paper-meta-row, .paper-card > details[open] { grid-column: 1; }
