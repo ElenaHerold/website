@@ -57,7 +57,7 @@ img { max-width: 100%; }
 main { min-height: calc(100vh - 120px); }
 main:has(> .hero) { min-height: 0; }
 .container { width: min(calc(100% - 4rem), 1080px); margin: auto; }
-.hero { display: flex; align-items: center; padding: 5rem 0 1.5rem; }
+.hero { display: flex; align-items: center; padding: 5rem 0 2rem; }
 .profile-hero { display: grid; grid-template-columns: minmax(320px, .86fr) minmax(0, 1.14fr); gap: clamp(2.8rem, 5vw, 4.8rem); align-items: center; }
 .profile-hero h1 { display: flex; flex-wrap: wrap; align-items: baseline; gap: .055em; }
 .portrait { display: block; width: 100%; height: auto; object-fit: contain; border: 0; box-shadow: none; margin: 0; }
@@ -66,8 +66,8 @@ h1 small { font-size: .2em !important; font-weight: 500 !important; }
 .welcome { margin-bottom: .55rem; color: var(--green); font-size: 1.08rem; font-weight: 800; }
 .bio { max-width: 66ch; margin-top: 1.8rem; color: var(--muted); }
 .actions, .quick-links { display: flex; flex-wrap: wrap; gap: .65rem 1.1rem; }
-.hero .actions { margin-top: .95rem; }
-.hero .quick-links { margin-top: .75rem; }
+.hero .actions { margin-top: 1.075rem; }
+.hero .quick-links { margin-top: .9rem; }
 .quick-links a { color: var(--secondary); font-size: .76rem; font-weight: 750; }
 .button { padding: .68rem .9rem; border: 1px solid var(--line); font-size: .74rem; font-weight: 800; text-decoration: none; text-transform: uppercase; }
 .button:hover { border-color: var(--secondary); color: var(--secondary); }
@@ -150,10 +150,19 @@ html:not([data-theme="light"]) .paper-links a, html:not([data-theme="light"]) de
 .contact-bottom-links { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.4rem; }
 .contact-bottom-links a { color: var(--secondary); font-weight: 750; }
 
-.music-content { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 2.5rem; }
-.music-content > section { border-top: 1px solid var(--line); padding-top: 1.25rem; }
-.music-content p { color: var(--muted); }
-.music-content a { color: var(--secondary); }
+.music-page .container { max-width: 960px; }
+.music-page .page-title { margin-bottom: clamp(1.8rem, 4vw, 3.25rem); }
+.music-page .page-title h1 { font-family: var(--serif); font-weight: 600; letter-spacing: -.05em; }
+.music-content { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.music-content > section { min-width: 0; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.music-content > section:first-child { padding: clamp(1.2rem, 2.6vw, 2rem); background: color-mix(in srgb, var(--green) 5%, var(--surface)); border: 1px solid var(--line); }
+.music-content .simple-heading h2 { color: var(--green); font: 600 1.55rem/1.2 var(--serif); }
+.music-content p { margin: 0 0 1.2rem; color: var(--muted); }
+.music-content .resource-list { list-style: none; padding: 0; margin: 0; }
+.music-content .resource-list li { margin: 0; padding: .65rem 0; border-bottom: 1px solid var(--line); }
+.music-content .resource-list li:last-child { border-bottom: 0; }
+.music-content a { color: var(--text); text-decoration-color: var(--green-soft); text-decoration-thickness: 1px; }
+.music-content a:hover, .music-content a:focus-visible { color: var(--green); }
 
 /* Gentler research-page rhythm */
 .research-page .container { width: min(calc(100% - 4rem), 900px); }
@@ -212,7 +221,7 @@ html:not([data-theme="light"]) .paper-links a, html:not([data-theme="light"]) de
 
 @media (max-width: 620px) {
   .hero, .compact-page { padding: 3rem 0 4rem; }
-  .hero { padding-bottom: 1.25rem; }
+  .hero { padding-bottom: 1.625rem; }
   h1 { font-size: 3.35rem; }
   .paper-card { grid-template-columns: 1fr; }
   .paper-card h3, .paper-meta-row, .paper-card > details[open] { grid-column: 1; }
