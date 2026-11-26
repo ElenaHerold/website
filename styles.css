@@ -17,7 +17,7 @@
   --sans: Arial, Helvetica, sans-serif;
 }
 
-html[data-theme="dark"] {
+html:not([data-theme="light"]) {
   --bg: #0c1120;
   --surface: #151d32;
   --surface-soft: #19233b;
@@ -34,8 +34,8 @@ html[data-theme="dark"] {
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; padding-left: var(--nav-w); background: var(--bg); color: var(--text); font: 16px/1.62 var(--sans); }
+html { scroll-behavior: smooth; font-size: 112.5%; }
+body { margin: 0; padding-left: var(--nav-w); background: var(--bg); color: var(--text); font: 1rem/1.62 var(--sans); }
 a { color: inherit; text-underline-offset: 4px; }
 img { max-width: 100%; }
 .skip-link { position: fixed; left: -20rem; top: 1rem; z-index: 100; padding: .7rem 1rem; color: var(--text); background: var(--surface); }
@@ -70,7 +70,7 @@ h1 small { font-size: .2em !important; font-weight: 500 !important; }
 .button { padding: .68rem .9rem; border: 1px solid var(--line); font-size: .74rem; font-weight: 800; text-decoration: none; text-transform: uppercase; }
 .button:hover { border-color: var(--secondary); color: var(--secondary); }
 .button.primary { color: #fff; background: var(--green); border-color: var(--green); }
-html[data-theme="dark"] .button.primary { color: #111418; }
+html:not([data-theme="light"]) .button.primary { color: #111418; }
 
 .compact-page { padding: 4.5rem 0 6rem; }
 .page-title { margin-bottom: 2rem; }
@@ -92,7 +92,7 @@ html[data-theme="dark"] .button.primary { color: #111418; }
 .paper-actions-row details p { max-width: 78ch; margin: 1rem 0 0; color: var(--muted); }
 .paper-links { display: flex; align-items: center; gap: 1rem; }
 .paper-links a, details summary { color: var(--green-dark); font-size: .76rem; font-weight: 800; cursor: pointer; }
-html[data-theme="dark"] .paper-links a, html[data-theme="dark"] details summary { color: var(--green); }
+html:not([data-theme="light"]) .paper-links a, html:not([data-theme="light"]) details summary { color: var(--green); }
 
 .research-continuation, .subsection { margin-top: 3.5rem; }
 .simple-heading { margin-bottom: 1.15rem; }
@@ -185,6 +185,7 @@ html[data-theme="dark"] .paper-links a, html[data-theme="dark"] details summary 
 .footer p { margin: .3rem 0 0; }
 
 @media (max-width: 900px) {
+  html { font-size: 106.25%; }
   body { padding-left: 0; }
   .site-header { position: sticky; inset: 0 0 auto; width: auto; border-right: 0; border-bottom: 1px solid var(--line); }
   .nav-wrap { min-height: auto; padding: 1rem 1.25rem; display: grid; grid-template-columns: 1fr auto; align-items: center; }
