@@ -7,6 +7,13 @@
   const nav = document.querySelector('.nav');
   const menu = document.querySelector('.menu-button');
 
+  if (nav && !nav.querySelector('a[href="music.html"]')) {
+    const musicLink = document.createElement('a');
+    musicLink.href = 'music.html';
+    musicLink.textContent = 'Music';
+    nav.appendChild(musicLink);
+  }
+
   if (navWrap) {
     const themeButton = document.createElement('button');
     themeButton.className = 'theme-toggle';
