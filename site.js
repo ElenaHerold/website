@@ -1,7 +1,7 @@
 (function () {
   const root = document.documentElement;
   const savedTheme = localStorage.getItem('elena-theme');
-  root.dataset.theme = savedTheme === 'dark' ? 'dark' : 'light';
+  root.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
 
   const navWrap = document.querySelector('.nav-wrap');
   const nav = document.querySelector('.nav');
